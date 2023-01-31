@@ -1,0 +1,13 @@
+-- The cursor.execute method takes a SQL statement as an argument, followed by any parameters that should be bound to the statement. The SQL statement is used to query the database or perform data manipulation operations like INSERT, UPDATE, or DELETE. The parameters, if specified, are used to substitute placeholder values in the SQL statement.
+
+-- Here's a simple example of the cursor.execute method:
+
+-- cursor.execute("SELECT * FROM salesforce_table WHERE field1 = %s", (value,))
+
+-- In this example, the SQL statement is a SELECT query that retrieves all records from the salesforce_table where the field1 column is equal to value. The %s placeholder in the SQL statement is a placeholder for the value that will be bound to the statement. The (value,) argument is a tuple that contains the value that should be bound to the placeholder.
+
+-- You can also use multiple placeholders in a single SQL statement, like this:
+
+-- cursor.execute("INSERT INTO flagged_table (field1, field2) VALUES (%s, %s)", (value1, value2))
+
+-- In this example, the SQL statement is an INSERT statement that inserts a new record into the flagged_table with field1 and field2 values equal to value1 and value2, respectively. The (value1, value2) argument is a tuple that contains the values that should be bound to the placeholders in the SQL statement.
